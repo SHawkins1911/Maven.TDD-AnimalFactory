@@ -42,23 +42,22 @@ public class CatTest {
 
         @Test
         public void createCat() {
-            Cat cat1 = new Cat("Jax", null, 3);
+            Cat cat1 = new Cat("Jax", birthDate, 3);
 
             Assert.assertEquals(3, (int)cat1.getId());
         }
 
         @Test
         public void speak() {
-            Cat cat1 = new Cat("Jax", null, 3);
+            Cat cat1 = new Cat("Jax", birthDate, 3);
 
             Assert.assertEquals("meow!", cat1.speak());
         }
 //        @Test
 //        public void setBirthDate() {
+//            Cat cat1 = new Cat("Jax", birthDate, 3);
 //
-//            this.birthDate = birthDate;
-//
-//            Assert.assertEquals( "null", birthDate.toString());
+//           Assert.assertEquals( birthDate, this.getBirthDate());
 //        }
 
         @Test
@@ -76,7 +75,7 @@ public class CatTest {
 
             Assert.assertEquals(3, (int)cat1.getId());
         }
-
+        @Test
         public void newInstanceOfMammal(){
             Cat cat1 = new Cat("Jax", null, 3);
 

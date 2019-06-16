@@ -13,7 +13,8 @@ public class CatHouseTest {
         public  void add(){
             Cat cat1 = new Cat("Whiskers", null, 1);
             CatHouse catHouse = new CatHouse();
-            CatHouse.add(cat1);
+            catHouse.clear();
+            catHouse.add(cat1);
 
 
             Assert.assertEquals(1, (int) CatHouse.getNumberOfCats());
@@ -23,6 +24,7 @@ public class CatHouseTest {
         public  void remove(){
             Cat cat1 = new Cat("Whiskers", null, 1);
             CatHouse catHouse = new CatHouse();
+            catHouse.clear();
             CatHouse.add(cat1);
             CatHouse.remove(1);
 
@@ -34,6 +36,7 @@ public class CatHouseTest {
         public void removeByCat(){
             Cat cat1 = new Cat("Whiskers", null, 1);
             CatHouse catHouse = new CatHouse();
+            catHouse.clear();
             CatHouse.add(cat1);
             CatHouse.remove(cat1);
 

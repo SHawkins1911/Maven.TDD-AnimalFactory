@@ -27,22 +27,24 @@ public class DogHouseTest {
         public  void remove(){
             Dog dog1 = new Dog("Fido", null, 1);
             DogHouse dogHouse = new DogHouse();
-            DogHouse.add(dog1);
-            DogHouse.remove(1);
+            dogHouse.clear();
+            dogHouse.add(dog1);
+            dogHouse.remove(1);
 
 
-            Assert.assertEquals(0, (int) DogHouse.getNumberOfDogs());
+            Assert.assertEquals(0, (int) dogHouse.getNumberOfDogs());
         }
 
         @org.junit.Test
         public void removeByDog(){
             Dog dog1 = new Dog("Fido", null, 1);
             DogHouse dogHouse = new DogHouse();
-            DogHouse.add(dog1);
-            DogHouse.remove(dog1);
+            dogHouse.clear();
+            dogHouse.add(dog1);
+            dogHouse.remove(dog1);
 
 
-            Assert.assertEquals(0, (int)DogHouse.getNumberOfDogs());
+            Assert.assertEquals(0, (int)dogHouse.getNumberOfDogs());
         }
 
         @org.junit.Test
