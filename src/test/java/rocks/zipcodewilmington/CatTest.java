@@ -2,21 +2,20 @@ package rocks.zipcodewilmington;
 
 import org.junit.Assert;
 import org.junit.Test;
+import rocks.zipcodewilmington.animals.Animal;
 import rocks.zipcodewilmington.animals.Cat;
+import rocks.zipcodewilmington.animals.Mammal;
 
+import javax.swing.text.DateFormatter;
+import java.text.DateFormat;
 import java.util.Date;
 
 /**
  * @author leon on 4/19/18.
  */
 public class CatTest {
-    // TODO - Create tests for `void setName(String name)`
-    // TODO - Create tests for `speak`
+
     // TODO - Create tests for `setBirthDate(Date birthDate)`
-    // TODO - Create tests for `void eat(Food food)`
-    // TODO - Create tests for `Integer getId()`
-    // TODO - Create test to check Animal inheritance; google search `java instanceof keyword`
-    // TODO - Create test to check Mammal inheritance; google search `java instanceof keyword`
 
 
     @Test
@@ -39,5 +38,58 @@ public class CatTest {
         Assert.assertEquals(givenBirthDate, retrievedBirthDate);
         Assert.assertEquals(givenId, retrievedId);
     }
+        Date birthDate = new Date();
 
-}
+        @Test
+        public void createCat() {
+            Cat cat1 = new Cat("Jax", null, 3);
+
+            Assert.assertEquals(3, (int)cat1.getId());
+        }
+
+        @Test
+        public void speak() {
+            Cat cat1 = new Cat("Jax", null, 3);
+
+            Assert.assertEquals("meow!", cat1.speak());
+        }
+//        @Test
+//        public void setBirthDate() {
+//
+//            this.birthDate = birthDate;
+//
+//            Assert.assertEquals( "null", birthDate.toString());
+//        }
+
+        @Test
+        public void eat() {
+            Cat cat1 = new Cat("Jax", null, 3);
+            Food food = new Food();
+            cat1.eat(food);
+
+            Assert.assertEquals(1, (int)cat1.getNumberOfMealsEaten());
+        }
+
+        @Test
+        public void getId() {
+            Cat cat1 = new Cat("Jax", null, 3);
+
+            Assert.assertEquals(3, (int)cat1.getId());
+        }
+
+        public void newInstanceOfMammal(){
+            Cat cat1 = new Cat("Jax", null, 3);
+
+            Assert.assertTrue(cat1 instanceof Mammal);
+        }
+
+        @Test
+        public void newInstanceOfAnimal() {
+            Cat cat1 = new Cat("Jax", null, 3);
+
+            Assert.assertTrue(cat1 instanceof Animal);
+        }
+
+    }
+
+

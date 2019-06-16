@@ -32,4 +32,17 @@ public class CatHouse {
     public static void clear() {
         catHouse.clear();
     }
+
+    public CatHouse() {
+        this.catHouse = catHouse;
+
+    }
+
+    public static AnimalWarehouse<Cat> getCatHouse() {
+        return catHouse;
+    }
+
+    public static void setCatHouse(AnimalWarehouse<Cat> catHouse) {
+        CatHouse.catHouse = catHouse;
+    }
 }
